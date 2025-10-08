@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Unlock vault
+echo "Opening vault on ${1}3..."
+sudo cryptsetup open ${1}3 vault
+
+# Mount vaults to directories
+echo "Creating mount directory..."
+sudo mkdir /mnt/vault
+echo "Mounting vault..."
+sudo mount /dev/mapper/vault /mnt/vault

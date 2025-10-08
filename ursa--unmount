@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Unmount vaults
+echo "Unmounting vault directory..."
+sudo umount /mnt/vault
+
+# Close vault
+echo "Closing vault..."
+sudo cryptsetup close vault
+
+# Unmount home volume
+echo "Unmounting live partition..."
+udisksctl unmount -b ${1}2
