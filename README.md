@@ -63,6 +63,9 @@ Run the following commands to set up the backup volume:
     # Open the backup volume
     cryptsetup open /dev/sdb3 vault
 
+    # Format volume as EXT4
+    mkfs.ext4 /dev/mapper/vault
+
     # Create directory for mount point
     mkdir /mnt/vault
 
@@ -72,11 +75,11 @@ Run the following commands to set up the backup volume:
     # Set permissions
     chmod 777 -R /mnt/vault
 
-    # Format volume as EXT4
-    mkfs.ext4 /dev/mapper/vault
+    # Unmount backup vault
+    umount /mnt/vault
 
     # Close backup volume
-    cryptsetup close vault-a
+    cryptsetup close vault
 
 Finally, unmount the auxiliary partition.
 
