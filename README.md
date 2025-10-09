@@ -141,6 +141,7 @@ In order to update *ursa-minor* on the backup drive, simply run:
 ## External Dependencies
 
 - [cryptsetup](https://gitlab.com/cryptsetup/cryptsetup)
+- [xdg-utils](https://www.freedesktop.org/wiki/Software/xdg-utils)
 - [udisks2](https://www.freedesktop.org/wiki/Software/udisks)
 
 ## TODO
