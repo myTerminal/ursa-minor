@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+git clone https://github.com/myTerminal/ursa-minor /tmp/ursa-minor
+(cd /tmp/ursa-minor; make redeploy)
+rm -rf /tmp/ursa-minor
